@@ -1,60 +1,67 @@
-import React from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+//import React, { useEffect } from 'react';
+import React from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
-const categories = [
-  { name: 'portraits', description: 'Portraits of people in my life' }
+// this is an array of my projects
+const ProjectList = [
+  { name: 'projects', description: 'my projects' }
 ]
-
 
 function Nav(props) {
   const {
-    categories = [],
-    setCurrentCategory,
+    ProjectList = [],
+    setCurrentProject,
     contactSelected,
-    currentCategory,
+    currentProject,
     setContactSelected,
   } = props;
 
-
-  const handleClick = (item) => {
-    console.log(item);
-    return item;
-  };
+  // useEffect(() => {
+  //   document.title = capitalizeFirstLetter(currentProject.name);
+  // }, [currentProject]);
 
   return (
+    //the header is an example of a JSX element
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+          <span role="img" aria-label="myName"> </span> img
         </a>
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+          {/* <li className="mx-2">
+            <a href="#about" onClick={() => setContactSelected(false)}>
               About me
             </a>
-          </li>
+            <a href="#resume" onClick={() => setContactSelected(false)}>
+              My Resume
+            </a>
+            <a href="#portfolio" onClick={() => setContactSelected(false)}>
+              Portfolio
+            </a>
+          </li> */}
+
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
-          {categories.map((category) => (
+
+          {/* {ProjectList.map((project) => (
             <li
-              className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && 'navActive'
+              className={`mx-1 ${currentProject.name === project.name && !contactSelected && 'navActive'
                 }`}
-              key={category.name}
+              key={project.name}
             >
               <span
                 onClick={() => {
-                  setCurrentCategory(category);
+                  setCurrentProject(project);
                   setContactSelected(false);
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
+                {capitalizeFirstLetter(project.name)}
               </span>
             </li>
-          ))}
+          ))} */}
         </ul>
       </nav>
     </header>
