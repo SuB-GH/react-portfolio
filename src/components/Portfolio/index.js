@@ -1,15 +1,14 @@
 import React from 'react';
-//import PhotoList from '../PhotoList';
-import { capitalizeFirstLetter } from '../../utils/helpers';
-
+//import { capitalizeFirstLetter } from '../../utils/helpers';
+import Project from '../Project';
 function Portfolio(props) {
-  const { currentCategory } = props;
+  
   return (
-    <section>
-      <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>
-      <p>{currentCategory.description}</p>
-      {/* <PhotoList category={currentCategory.name} /> */}
+    <section className="my-5">
+      <h1 id="portfolio">My Portfolio - (this is text from the Portfolio component)</h1>
+      <Project></Project>
     </section>
   );
+  
 }
 export default Portfolio;

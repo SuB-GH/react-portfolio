@@ -7,32 +7,32 @@ const Project = ({ project }) => {
   const [projects] = useState([
     {
       name: 'Run Buddy',
-      project: 'projects',
+      project: 'run-buddy-image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
     {
       name: 'Project 2',
-      project: 'projects',
+      project: 'run-buddy-image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
     {
       name: 'Project 3',
-      project: 'projects',
+      project: 'run-buddy-image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
     {
       name: 'Project 4',
-      project: 'projects',
+      project: 'run-buddy-image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
     {
       name: 'Project 5',
-      project: 'projects',
+      project: 'run-buddy-image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
     {
       name: 'Project 6',
-      project: 'projects',
+      project: 'run-buddy-image',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
     },
   ]);
@@ -47,17 +47,26 @@ const Project = ({ project }) => {
       {isModalOpen && (
         <Modal currentProject={currentProject} onClose={toggleModal} />
       )}
+      
       <div className="flex-row">
-        {currentProjects.map((image, i) => (
-          <img
-            src={require(`../../assets/small/${project}/${i}.jpg`)}
-            alt={image.name}
+        {projects.map((project, i) => (
+          <div>
+            <h3>{ project.name }</h3>
+            <img
+            src={require(`../../assets/small/${project.project}.jpg`)}
+            alt={project.name}
             className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
-            key={image.name}
+            onClick={() => toggleModal(project, i)}
+            key={project.name}
           />
+          </div>
         ))}
       </div>
+      
+      <img
+      src={require(`../../assets/small/proj1.jpg`)}
+      />
+    
     </div>
   );
 };

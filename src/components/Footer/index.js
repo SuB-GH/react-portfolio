@@ -7,9 +7,9 @@ function Footer() {
         <section className="my-5">       
             
                 <p>Email me at: </p> 
-                {/* <a href="">sbrown684@yahoo.com</a>
-                <a href="">https://github.com/SuB-GH</a>         */}
-                <Nav></Nav>
+                <a href="">sbrown684@yahoo.com</a>
+                <a href="">https://github.com/SuB-GH</a>        
+                
 
 </section>
     );

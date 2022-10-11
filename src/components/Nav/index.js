@@ -3,8 +3,8 @@ import React from 'react';
 //import About from '../About';
 //import Resume from '../Resume';
 //import Portfolio from '../Portfolio';
-import Footer from '../Footer';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+//import Footer from '../Footer';
+//import { capitalizeFirstLetter } from '../../utils/helpers';
 
 // const navOptions = [
 //   { name: 'about', description: 'About Me Section' }
@@ -13,11 +13,11 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   const {
-    navOptions = [],
+    //navOptions = [],
     setCurrentNavOption,
     currentNavOption,
-    contactSelected,
-    setContactSelected,
+    // contactSelected,
+    // setContactSelected,
   } = props;
 
   // useEffect(() => {
@@ -35,7 +35,7 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          
+
           {/* <li className={`mx-2 ${currentNavOption && 'navActive'}`}> */}
           {/* //when "about" is selected, it will render b/c setContactSelected is "false" */}
           {/* <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
@@ -45,21 +45,25 @@ function Nav(props) {
 
 
           <li className={`mx-2 ${currentNavOption && 'navActive'}`}>
-            <a data-testid="about" href="#about" onClick={() => setCurrentNavOption(true)}>About Me </a>
-          </li>
-
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+            <a data-testid="about" href="#about" onClick={() => setCurrentNavOption("about")}>About Me </a>
           </li>
 
           <li className={`mx-2 ${currentNavOption && 'navActive'}`}>
-            <a data-testid="resume" href="#resume" onClick={() => setCurrentNavOption(true)}>Resume  </a>
+            <a data-testid="contact" href="#contact" onClick={() => setCurrentNavOption("contact")}>Contact</a>
+          </li>
+
+          <li className={`mx-2 ${currentNavOption && 'navActive'}`}>
+            <a data-testid="resume" href="#resume" onClick={() => setCurrentNavOption("resume")}>Resume  </a>
+          </li>
+
+          <li className={`mx-2 ${currentNavOption && 'navActive'}`}>
+            <a data-testid="portfolio" href="#portfolio" onClick={() => setCurrentNavOption("portfolio")}>My Portfolio  </a>
           </li>
 
           {/* <li className="mx-2">
             <span>Portfolio</span>
             </li> */}
-          {navOptions.map((navOption) => (
+          {/* {navOptions.map((navOption) => (
             <li
             // className={`mx-1 ${currentNavOption.name === navOption.name && !contactSelected && 'navActive'
             //   }`}
@@ -74,11 +78,10 @@ function Nav(props) {
                 {capitalizeFirstLetter(navOption.name)}
               </span>
             </li>
-          ))}
+          ))} */}
           {/* <About></About> */}
           {/* <Resume></Resume> */}
-          {/* <Portfolio></Portfolio> */}
-
+          
 
         </ul>
       </nav>
@@ -87,6 +90,6 @@ function Nav(props) {
   );
 
 }
-<Footer></Footer>
+
 
 export default Nav;

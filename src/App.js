@@ -6,14 +6,15 @@ import About from './components/About'; // this helps render the About component
 //import Header from './components/Header';
 import Resume from './components/Resume';
 //import Portfolio from './components/Portfolio';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 import ContactForm from './components/Contact';
+import Portfolio from './components/Portfolio';
 
 // JSX is what's returned here (similar to HTML). the way React uses JSX behind the scenes is very similar to document.createElement()
 function App() {
- 
+
   const [contactSelected, setContactSelected] = useState(false);
-  const[setCurrentNavOption] = useState(false);
+  const [currentNavOption, setCurrentNavOption] = useState("about");
 
   // const navOptions = [
   //   { name: 'about', description: 'About Me Section' },
@@ -22,27 +23,25 @@ function App() {
   // ]
 
   return (
-    <div>
-      <Nav
-        // navOptions={navOptions}
-        setCurrentNavOption={setCurrentNavOption}
-        // currentNavOption={currentNavOption}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}     
-     ></Nav>
+    <div id="container">
+      <div>
+        <Nav
+          // navOptions={navOptions}
+          setCurrentNavOption={setCurrentNavOption}
+          currentNavOption={currentNavOption}
+          contactSelected={contactSelected}
+          setContactSelected={setContactSelected}
+        ></Nav>
 
-      {/* in main section, this means if contact form has been selected, it renders, otherwise resume, about and any other headings will show. */}
-      <main>
-      {!contactSelected ? (
-  <>
-    <Resume></Resume>
-    <About></About>
-    {/* <Header></Header> */}
-  </>
-) : (
-    <ContactForm></ContactForm>
-  )} 
-        {/* {!contactSelected ? (
+        {/* in main section, this means if contact form has been selected, it renders, otherwise resume, about and any other headings will show. */}
+        <main>
+
+          {currentNavOption === "resume" ? <Resume></Resume> : null}
+          {currentNavOption === "about" ? <About></About> : null}
+          {currentNavOption === "portfolio" ? <Portfolio></Portfolio> : null}
+          {currentNavOption === "contact" ? <ContactForm></ContactForm> : null}
+
+          {/* {!contactSelected ? (
           <>
             
             <Header></Header>
@@ -51,7 +50,9 @@ function App() {
           <ContactForm></ContactForm>
         )  
         } */}
-      </main>
+        </main>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }

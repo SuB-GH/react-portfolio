@@ -101,9 +101,18 @@ header a {
   color: var(--light);
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+}
+
 footer {
   background: var(--dark);
   background-color: #492c84;
+  
 }
 
 footer a {
