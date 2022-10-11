@@ -1,70 +1,86 @@
-//import React, { useEffect } from 'react';
 import React from 'react';
+//import React, { useEffect } from 'react';
+import About from '../About';
+import Resume from '../Resume';
+//import Portfolio from '../Portfolio';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
-// this is an array of my projects
-const ProjectList = [
-  { name: 'projects', description: 'my projects' }
+const navOptions = [
+  { name: 'about', description: 'About Me Section' }
 ]
+
 
 function Nav(props) {
   const {
-    ProjectList = [],
-    setCurrentProject,
+    navOptions = [],
+    setCurrentNavOption,
+    currentNavOption,
     contactSelected,
-    currentProject,
     setContactSelected,
   } = props;
 
   // useEffect(() => {
-  //   document.title = capitalizeFirstLetter(currentProject.name);
-  // }, [currentProject]);
+  //   document.title = capitalizeFirstLetter(currentCategory.name);
+  // }, [currentCategory]);
 
   return (
-    //the header is an example of a JSX element
     <header className="flex-row px-1">
       <h2>
+
         <a data-testid="link" href="/">
-          <span role="img" aria-label="myName"> </span> img
+          <span> </span> My Portfolio
         </a>
+
       </h2>
       <nav>
         <ul className="flex-row">
-          {/* <li className="mx-2">
-            <a href="#about" onClick={() => setContactSelected(false)}>
+
+          {/* <li className={`mx-2 ${currentNavOption && 'navActive'}`}> */}
+          {/* //when "about" is selected, it will render b/c setContactSelected is "false" */}
+          {/* <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
               About me
             </a>
-            <a href="#resume" onClick={() => setContactSelected(false)}>
-              My Resume
-            </a>
-            <a href="#portfolio" onClick={() => setContactSelected(false)}>
-              Portfolio
-            </a>
           </li> */}
+
+
+          <li className={`mx-2 ${currentNavOption && 'navActive'}`}>
+            <a data-testid="about" href="#about" onClick={() => setCurrentNavOption(true)}>About Me </a>
+          </li>
 
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
 
-          {/* {ProjectList.map((project) => (
+          <li className={`mx-2 ${currentNavOption && 'navActive'}`}>
+            <a data-testid="resume" href="#resume" onClick={() => setCurrentNavOption(true)}>Resume  </a>
+          </li>
+
+          {/* <li className="mx-2">
+            <span>Portfolio</span>
+            </li> */}
+          {navOptions.map((navOption) => (
             <li
-              className={`mx-1 ${currentProject.name === project.name && !contactSelected && 'navActive'
+              className={`mx-1 ${currentNavOption.name === navOption.name && !contactSelected && 'navActive'
                 }`}
-              key={project.name}
+              key={navOption.name}
             >
               <span
                 onClick={() => {
-                  setCurrentProject(project);
+                  setCurrentNavOption(navOption);
                   setContactSelected(false);
                 }}
               >
-                {capitalizeFirstLetter(project.name)}
+                {capitalizeFirstLetter(navOption.name)}
               </span>
             </li>
-          ))} */}
+          ))}
+          {/* <About></About> */}
+          {/* <Resume></Resume> */}
+          {/* <Portfolio></Portfolio> */}
+
         </ul>
       </nav>
-    </header>
+    </header >
   );
 }
 

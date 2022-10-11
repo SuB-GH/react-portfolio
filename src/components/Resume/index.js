@@ -4,9 +4,9 @@ import React from 'react';
 function Resume() {
   return (
     <section className="my-5">
-      <h1 id="resume">My Resume</h1>
+      <h1 id="resume">My Resume - (this is text from the Resume component)</h1>
     </section>
   );
 }
 
-export default Resume;  // this exports the About component
+export default Resume;  // this exports the Resume component

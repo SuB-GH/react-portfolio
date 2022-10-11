@@ -36,7 +36,7 @@ body {
   letter-spacing: .1em;
   background: var(--dark);
   color: var(--light);
-  font-family: 'Poiret One', cursive;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 
 }
 
@@ -46,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;

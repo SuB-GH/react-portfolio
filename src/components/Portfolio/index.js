@@ -1,20 +1,15 @@
-// this creates the About component
 import React from 'react';
-import Project from '../Project';
-// import coverImage from '../../assets/cover/cover-image.jpg';
-function Portfolio() {
+//import PhotoList from '../PhotoList';
+import { capitalizeFirstLetter } from '../../utils/helpers';
+
+function Portfolio(props) {
+  const { currentCategory } = props;
   return (
-    <section className="my-5">
-      <h1 id="about"> My Portfolio </h1>
-      
-      <div className="my-2">
-        <p>
-        
-        </p>
-      </div>
-      <Portfolio  />
+    <section>
+      <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>
+      <p>{currentCategory.description}</p>
+      {/* <PhotoList category={currentCategory.name} /> */}
     </section>
   );
 }
-
-export default Portfolio;  // this exports the About component
+export default Portfolio;
