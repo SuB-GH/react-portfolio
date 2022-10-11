@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About'; // this helps render the About component here in the App component
-import Header from './components/Header';
+//import Header from './components/Header';
 import Resume from './components/Resume';
 //import Portfolio from './components/Portfolio';
 //import Footer from './components/Footer';
@@ -15,18 +15,18 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
   const[setCurrentNavOption] = useState(false);
 
-  const navOptions = [
-    { name: 'about', description: 'About Me Section' },
-    { name: 'portfolio', description: 'My Portfolio' },
-    { name: 'resume', description: 'My Resume' }
-  ]
+  // const navOptions = [
+  //   { name: 'about', description: 'About Me Section' },
+  //   { name: 'portfolio', description: 'My Portfolio' },
+  //   { name: 'resume', description: 'My Resume' }
+  // ]
 
   return (
     <div>
       <Nav
-        navOptions={navOptions}
+        // navOptions={navOptions}
         setCurrentNavOption={setCurrentNavOption}
-        currentNavOption={currentNavOption}
+        // currentNavOption={currentNavOption}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}     
      ></Nav>
@@ -37,6 +37,7 @@ function App() {
   <>
     <Resume></Resume>
     <About></About>
+    {/* <Header></Header> */}
   </>
 ) : (
     <ContactForm></ContactForm>

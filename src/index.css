@@ -93,6 +93,8 @@ a:hover {
 
 header {
   background: var(--dark);
+  background-color: #492c84;
+  
 }
 
 header a {
@@ -101,6 +103,7 @@ header a {
 
 footer {
   background: var(--dark);
+  background-color: #492c84;
 }
 
 footer a {

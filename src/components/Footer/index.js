@@ -1,14 +1,17 @@
 import React from "react";
+import Nav from '../Nav';
 //import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Footer() {
     return (
-        <div>        
+        <section className="my-5">       
             
-                Email me at:  <a href="">sbrown684@yahoo.com</a>
-                <a href="">https://github.com/SuB-GH</a>        
+                <p>Email me at: </p> 
+                {/* <a href="">sbrown684@yahoo.com</a>
+                <a href="">https://github.com/SuB-GH</a>         */}
+                <Nav></Nav>
 
-        </div>
+</section>
     );
 }
 export default Footer;

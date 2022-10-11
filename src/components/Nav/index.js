@@ -1,13 +1,14 @@
 import React from 'react';
 //import React, { useEffect } from 'react';
-import About from '../About';
-import Resume from '../Resume';
+//import About from '../About';
+//import Resume from '../Resume';
 //import Portfolio from '../Portfolio';
+import Footer from '../Footer';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
-const navOptions = [
-  { name: 'about', description: 'About Me Section' }
-]
+// const navOptions = [
+//   { name: 'about', description: 'About Me Section' }
+// ]
 
 
 function Nav(props) {
@@ -28,13 +29,13 @@ function Nav(props) {
       <h2>
 
         <a data-testid="link" href="/">
-          <span> </span> My Portfolio
+          <span> </span> Susan Brown
         </a>
 
       </h2>
       <nav>
         <ul className="flex-row">
-
+          
           {/* <li className={`mx-2 ${currentNavOption && 'navActive'}`}> */}
           {/* //when "about" is selected, it will render b/c setContactSelected is "false" */}
           {/* <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
@@ -60,13 +61,13 @@ function Nav(props) {
             </li> */}
           {navOptions.map((navOption) => (
             <li
-              className={`mx-1 ${currentNavOption.name === navOption.name && !contactSelected && 'navActive'
-                }`}
-              key={navOption.name}
+            // className={`mx-1 ${currentNavOption.name === navOption.name && !contactSelected && 'navActive'
+            //   }`}
+            // key={navOption.name}
             >
               <span
                 onClick={() => {
-                  setCurrentNavOption(navOption);
+
                   setContactSelected(false);
                 }}
               >
@@ -78,10 +79,14 @@ function Nav(props) {
           {/* <Resume></Resume> */}
           {/* <Portfolio></Portfolio> */}
 
+
         </ul>
       </nav>
     </header >
+
   );
+
 }
+<Footer></Footer>
 
 export default Nav;
