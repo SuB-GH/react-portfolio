@@ -4,8 +4,8 @@ import Project from '../Project';
 function Portfolio(props) {
   
   return (
-    <section className="my-5">
-      <h1 id="portfolio">My Portfolio - (this is text from the Portfolio component)</h1>
+    <section id="myProj" className="my-5">
+      <h1 id="portfolio">My Projects</h1>
       <Project></Project>
     </section>
   );

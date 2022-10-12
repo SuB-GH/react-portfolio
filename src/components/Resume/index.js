@@ -1,10 +1,17 @@
 // this creates the Resume component
 import React from 'react';
-// import coverImage from '../../assets/cover/cover-image.jpg';
+
 function Resume() {
   return (
     <section className="my-5">
-      <h1 id="resume">My Resume - (this is text from the Resume component)</h1>
+      <h1 id="resume">My Resume</h1>
+      <img
+            src={require(`../../assets/resume/sample-resume.jpg`)}
+            alt="resume"
+            className="img-thumbnail mx-1"
+            //onClick={() => toggleModal(project, i)}
+            //key={project.name}
+          />
     </section>
   );
 }

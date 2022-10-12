@@ -7,33 +7,45 @@ const Project = ({ project }) => {
   const [projects] = useState([
     {
       name: 'Run Buddy',
-      project: 'run-buddy-image',
+      project: 'run-buddy',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      deployed: 'https://sub-gh.github.io/run-buddy/',
+      github: 'https://github.com/SuB-GH/run-buddy'
     },
     {
-      name: 'Project 2',
-      project: 'run-buddy-image',
+      name: 'Rental Recap',
+      project: 'rental-recap',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      deployed: 'https://morning-meadow-66155.herokuapp.com/',
+      github: 'https://github.com/sczygelski/order-up'
     },
     {
-      name: 'Project 3',
-      project: 'run-buddy-image',
+      name: 'Staring at the Stars',
+      project: 'sats',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      deployed: 'https://sub-gh.github.io/group-4/',
+      github: 'https://github.com/SuB-GH/group-4'
     },
     {
-      name: 'Project 4',
-      project: 'run-buddy-image',
+      name: 'JavaScript Coding Quiz',
+      project: 'coding-quiz',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      deployed: 'https://sub-gh.github.io/coding-quiz/',
+      github: 'https://github.com/SuB-GH/coding-quiz'
     },
     {
-      name: 'Project 5',
-      project: 'run-buddy-image',
+      name: 'Note Taker',
+      project: 'note-taker',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      deployed: 'https://evening-spire-55005.herokuapp.com/',
+      github: 'https://github.com/SuB-GH/note-taker'
     },
     {
-      name: 'Project 6',
-      project: 'run-buddy-image',
+      name: 'Tech Blog',
+      project: 'tech-blog',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+      deployed: 'https://aqueous-badlands-64708.herokuapp.com/',
+      github: 'https://github.com/SuB-GH/tech-blog'
     },
   ]);
 
@@ -50,7 +62,7 @@ const Project = ({ project }) => {
       
       <div className="flex-row">
         {projects.map((project, i) => (
-          <div>
+          <div id="jpegs">
             <h3>{ project.name }</h3>
             <img
             src={require(`../../assets/small/${project.project}.jpg`)}
@@ -63,9 +75,7 @@ const Project = ({ project }) => {
         ))}
       </div>
       
-      <img
-      src={require(`../../assets/small/proj1.jpg`)}
-      />
+      
     
     </div>
   );

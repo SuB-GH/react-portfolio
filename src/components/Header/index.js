@@ -5,9 +5,6 @@ import Nav from '../Nav';
 
 //import { capitalizeFirstLetter } from '../../utils/helpers';
 
-
-
-
 function Header() {
 
   return (

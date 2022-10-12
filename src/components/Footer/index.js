@@ -4,7 +4,7 @@ import Nav from '../Nav';
 
 function Footer() {
     return (
-        <section className="my-5">       
+        <section className="my-2">       
             
                 <p>Email me at: </p> 
                 <a href="">sbrown684@yahoo.com</a>
