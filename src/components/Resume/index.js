@@ -3,7 +3,7 @@ import React from 'react';
 
 function Resume() {
   return (
-    <section className="my-5">
+    <section id="myRes" className="my-5">
       <h1 id="resume">My Resume</h1>
       <img
             src={require(`../../assets/resume/sample-resume.jpg`)}

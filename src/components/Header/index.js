@@ -8,7 +8,7 @@ import Nav from '../Nav';
 function Header() {
 
   return (
-    <section className="my-5">
+    <section id="myHeader" className="my-5">
       <p>this text is from the header component</p>
       <Nav></Nav>
 

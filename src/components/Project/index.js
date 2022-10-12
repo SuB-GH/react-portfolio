@@ -60,7 +60,7 @@ const Project = ({ project }) => {
         <Modal currentProject={currentProject} onClose={toggleModal} />
       )}
       
-      <div className="flex-row">
+      <div  id="myProjects" className="flex-row">
         {projects.map((project, i) => (
           <div id="jpegs">
             <h3>{ project.name }</h3>

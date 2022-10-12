@@ -111,17 +111,45 @@ section .my-5 {
   padding: 20px
 }
 .my-5 {
-  background-color: #81bd9c;
+  /* background-color: #81bd9c; */
   padding: 20px;
   
 }
-footer {
-    background-color:rgb(228, 46, 1)
-
+/*contact form*/
+#myContact {
+  background-color: #81bd9c;
+  padding: 20px;
+  width: 650px;
+  
+}
+/*Resume*/
+#myRes {
+  background-color: #81bd9c;
+  padding: 20px;
+  width: 400px;
+  
 }
 
-footer a {
-  color: var(--light);
+#myAbout {
+  background-color: #81bd9c;
+  padding: 20px;
+}
+
+#myProjects {
+  background-color: #81bd9c;
+  padding: 20px;
+ 
+}
+
+#myPortfolio {
+
+padding: 20px;
+}
+
+#myFooter {
+  background-color: #1c6b62;
+  padding: 20px;
+  
 }
 
 button {
