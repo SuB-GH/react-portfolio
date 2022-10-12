@@ -1,9 +1,9 @@
 // Project is a child of Portfolio?
 import React, { useState } from 'react';
-import Modal from '../Modal';
+//import Modal from '../Modal';
 const Project = ({ project }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentProject, setCurrentProject] = useState();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [currentProject, setCurrentProject] = useState();
   const [projects] = useState([
     {
       name: 'Run Buddy',
@@ -49,34 +49,25 @@ const Project = ({ project }) => {
     },
   ]);
 
-  const currentProjects = projects.filter((proj) => proj.project === project);
-  const toggleModal = (image, i) => {
-    setCurrentProject({ ...image, index: i });
-    setIsModalOpen(!isModalOpen);
-  }
   return (
     <div>
-      {isModalOpen && (
-        <Modal currentProject={currentProject} onClose={toggleModal} />
-      )}
-      
-      <div  id="myProjects" className="flex-row">
+      <div id="myProjects" className="flex-row">
         {projects.map((project, i) => (
-          <div id="jpegs">
-            <h3>{ project.name }</h3>
+          <div class="projContainer" id="jpegs">
+            <h3>{project.name}</h3>            
+            <a href='#'>{project.deployed}</a>
+            <a href='#'>{project.github}</a>
             <img
-            src={require(`../../assets/small/${project.project}.jpg`)}
-            alt={project.name}
-            className="img-thumbnail mx-1"
-            onClick={() => toggleModal(project, i)}
-            key={project.name}
-          />
+              src={require(`../../assets/proj-img/${project.project}.jpg`)}
+              alt={project.name}
+              className="img-thumbnail mx-1"
+              
+              key={project.name}
+            />
           </div>
         ))}
       </div>
-      
-      
-    
+
     </div>
   );
 };
