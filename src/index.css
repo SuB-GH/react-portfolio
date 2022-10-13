@@ -5,7 +5,7 @@ main {
 }
 
 :root {
-  --primary: #8c54ff;
+ 
   --secondary: #F3A847;
   --tertiary: #B12704;
   --light: #fafafa;
@@ -175,9 +175,26 @@ section .my-5 {
   color: rgba(0, 0, 0, .65)
 }
 
-.urls {
+
+#urls {
   font-size: 20px;
-  color: rgba(0, 0, 0, .65)
+  color: rgba(0, 0, 0, .65);
+  margin: 2px;
+
+}
+
+.urlBtn {
+  align-content: flex-end;
+  font-size: 10px;
+   background-color: #1c6b62;
+   padding: 5px;
+
+}
+
+.resDiv {
+  align-items: top;
+  top: auto;
+
 }
 
 #attrib1 {
@@ -201,6 +218,10 @@ section .my-5 {
   background-color: #1c6b62;
   padding: 20px;
 
+
+}
+.urlFooter {
+color: white;
 }
 
 button {

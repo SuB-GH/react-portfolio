@@ -3,16 +3,33 @@ import React from 'react';
 
 function Resume() {
   return (
-    <section id="myRes" className="my-5">
-      <h1 id="resume">My Resume</h1>
-      <img
-            src={require(`../../assets/resume/sample-resume.jpg`)}
-            alt="resume"
-            className="img-thumbnail mx-1"
-            //onClick={() => toggleModal(project, i)}
-            //key={project.name}
-          />
-    </section>
+    <div className="resDiv">
+      <section id="myRes">
+        <h1 id="resume">My Resume</h1>
+        <img
+          src={require(`../../assets/resume/resume.jpg`)}
+          alt="resume"
+          className="thumbnail"
+        />
+      </section>
+      {/* <section>
+        HTML
+        CSS
+        Git
+        GitHub
+        JavaScript
+        APIs
+        Node.js
+        Object-Oriented Programming
+        Express.js
+        SQL
+        Object Relational Mapping
+        Model-View Controller
+        NoSQL
+        React
+      </section> */}
+    </div>
+
   );
 }
 

@@ -3,9 +3,7 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About'; // this helps render the About component here in the App component
-//import Header from './components/Header';
 import Resume from './components/Resume';
-//import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
 import Portfolio from './components/Portfolio';
@@ -16,17 +14,10 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
   const [currentNavOption, setCurrentNavOption] = useState("about");
 
-  // const navOptions = [
-  //   { name: 'about', description: 'About Me Section' },
-  //   { name: 'portfolio', description: 'My Portfolio' },
-  //   { name: 'resume', description: 'My Resume' }
-  // ]
-
   return (
     <div id="container">
       <div>
         <Nav
-          // navOptions={navOptions}
           setCurrentNavOption={setCurrentNavOption}
           currentNavOption={currentNavOption}
           contactSelected={contactSelected}
@@ -41,15 +32,6 @@ function App() {
           {currentNavOption === "portfolio" ? <Portfolio></Portfolio> : null}
           {currentNavOption === "contact" ? <ContactForm></ContactForm> : null}
 
-          {/* {!contactSelected ? (
-          <>
-            
-            <Header></Header>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )  
-        } */}
         </main>
       </div>
       <Footer></Footer>

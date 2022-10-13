@@ -1,9 +1,6 @@
-// Project is a child of Portfolio?
 import React, { useState } from 'react';
-//import Modal from '../Modal';
 const Project = ({ project }) => {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [currentProject, setCurrentProject] = useState();
+
   const [projects] = useState([
     {
       name: 'Run Buddy',
@@ -53,14 +50,15 @@ const Project = ({ project }) => {
     
       <div id="myProjects" className="flex-row">
         {projects.map((project, i) => (
-          <div class="projContainer" id="jpegs">
+          <div className="projContainer" id="jpegs">
             <h3>{project.name}</h3>      
-            <p class="urls">    
+            <p id="urls">    
             <a href={project.deployed} target='_blank' rel={project.deployed}>
-              Deployed
+              <button className="urlBtn">Deployed</button>
             </a>
+
             <a href={project.github} target='_blank' rel={project.github} >
-              Github
+              <button className="urlBtn">Github</button>
               </a>
             </p>  
             <img
