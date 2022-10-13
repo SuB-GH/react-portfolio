@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.e408d097.css",
+    "main.js": "/react-portfolio/static/js/main.020e7ed0.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/532.jpg": "/react-portfolio/static/media/532.4547abef56e5e064e4a8.jpg",
+    "static/media/run-buddy.jpg": "/react-portfolio/static/media/run-buddy.38551f39834f4a8bf3fd.jpg",
+    "static/media/resume.jpg": "/react-portfolio/static/media/resume.208581615804ba979cf9.jpg",
+    "static/media/tech-blog.jpg": "/react-portfolio/static/media/tech-blog.fbaf6fb47edc6d8ab83a.jpg",
+    "static/media/rental-recap.jpg": "/react-portfolio/static/media/rental-recap.4b038c4beecf10c5281b.jpg",
+    "static/media/sats.jpg": "/react-portfolio/static/media/sats.0f7325bc493a301c9164.jpg",
+    "static/media/note-taker.jpg": "/react-portfolio/static/media/note-taker.cc4f57271fd229d7c421.jpg",
+    "static/media/coding-quiz.jpg": "/react-portfolio/static/media/coding-quiz.62d9cbbf8b0bb3f036d6.jpg",
+    "index.html": "/react-portfolio/index.html",
+    "main.e408d097.css.map": "/react-portfolio/static/css/main.e408d097.css.map",
+    "main.020e7ed0.js.map": "/react-portfolio/static/js/main.020e7ed0.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e408d097.css",
+    "static/js/main.020e7ed0.js"
+  ]
+}
