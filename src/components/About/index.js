@@ -4,7 +4,12 @@ function About() {
   return (
     <section id="myAbout" className="my-5">
       <h1 id="about">Welcome to My Portfolio</h1>
-      
+      <div>
+      <img id="avatar" src={require(`../../assets/proj-img/532.jpg`)}/>
+      <p id="attrib1">
+      <a id="attrib2" href="https://www.freepik.com/free-vector/different-woman-avatars_1089194.htm#query=female%20avatar&position=5&from_view=search">Image by ddraw</a> on Freepik
+      </p>
+      </div>
       <div className="my-2">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex

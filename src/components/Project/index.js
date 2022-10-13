@@ -50,13 +50,19 @@ const Project = ({ project }) => {
   ]);
 
   return (
-    <div>
+    
       <div id="myProjects" className="flex-row">
         {projects.map((project, i) => (
           <div class="projContainer" id="jpegs">
-            <h3>{project.name}</h3>            
-            <a href='#'>{project.deployed}</a>
-            <a href='#'>{project.github}</a>
+            <h3>{project.name}</h3>      
+            <p class="urls">    
+            <a href={project.deployed} target='_blank' rel={project.deployed}>
+              Deployed
+            </a>
+            <a href={project.github} target='_blank' rel={project.github} >
+              Github
+              </a>
+            </p>  
             <img
               src={require(`../../assets/proj-img/${project.project}.jpg`)}
               alt={project.name}
@@ -68,7 +74,7 @@ const Project = ({ project }) => {
         ))}
       </div>
 
-    </div>
+    
   );
 };
 

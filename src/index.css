@@ -107,27 +107,31 @@ header a {
   height: 100vh;
 
 }
+
 section .my-5 {
   padding: 20px
 }
+
 .my-5 {
   /* background-color: #81bd9c; */
   padding: 20px;
-  
+
 }
+
 /*contact form*/
 #myContact {
   background-color: #81bd9c;
   padding: 20px;
   width: 650px;
-  
+
 }
+
 /*Resume*/
 #myRes {
   background-color: #81bd9c;
   padding: 20px;
   width: 400px;
-  
+
 }
 
 #myAbout {
@@ -136,33 +140,67 @@ section .my-5 {
 }
 
 #myProjects {
-  background-color: #81bd9c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+  align-content: center;
+
+
 }
 
-#myProjects:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.projContainer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .projContainer {
-  padding: 2px 2px;
+
+  flex: content;
+  padding: 0px 20px 0px 20px;
+  margin: 10px;
   align-items: center;
+  align-self: center;
   justify-content: space-around;
   justify-content: space-between;
+  background-color: #81bd9c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 
 }
 
-#myPortfolio {
+.projContainer a {
+  align-items: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .65)
+}
 
-padding: 20px;
+.urls {
+  font-size: 20px;
+  color: rgba(0, 0, 0, .65)
+}
+
+#attrib1 {
+  font-size: 11px;
+}
+
+#attrib2 {
+  font-size: 11px;
+}
+
+#avatar {
+  height: 120px;
+}
+
+#myPortfolio {
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 #myFooter {
   background-color: #1c6b62;
   padding: 20px;
-  
+
 }
 
 button {
@@ -312,10 +350,13 @@ textarea {
 }
 
 .img-thumbnail {
-  width: auto;
-  height: 300px;
-  margin-bottom: 50px;
+  width: 400px;
+  height: auto;
+  padding: 15px 5px 15px 50px;
   cursor: pointer;
+  align-content: center;
+  vertical-align: center;
+
 }
 
 .modalBackdrop {
