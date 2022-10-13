@@ -1,17 +1,18 @@
 # Title:  React Portfolio
 
 ## Description:
-This app allows the user to generate a password based on certain criteria they select.  The resulting password is a randomized selection of unique characters which allows for better password security.
+This portfolio shows my skills as a web developer.  Sample projects with links to deployed apps allow the user to see the technologies I have used as a coding bootcamp student.
 
-## Usage:
-Click on the "Generate Password" button and answer the prompts.  After all prompts are answered, the password will be generated.
+## Technologies:
+React.js
+CSS
 
-<img width="637" alt="password-generator-screenshot" src="https://user-images.githubusercontent.com/105752625/193125779-d5343cda-c065-40da-8f2a-e193717addd9.PNG">
+![alt text](assets/proj-img/mod20-screenshot.jpg)
 
 ## Deployed application:
 Github |  https://github.com/SuB-GH/react-portfolio
 
-Browser |  https://sub-gh.github.io/password-generator/
+Github Pages |  https://sub-gh.github.io/react-portfolio/
 
 ## Created by:
 Susan Brown
