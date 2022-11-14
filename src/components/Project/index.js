@@ -30,12 +30,13 @@ const Project = ({ project }) => {
       deployed: 'https://sub-gh.github.io/coding-quiz/',
       github: 'https://github.com/SuB-GH/coding-quiz'
     },
+   
     {
-      name: 'Note Taker',
-      project: 'note-taker',
+      name: 'Trip Inspired',
+      project: 'trip-inspired',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
-      deployed: 'https://evening-spire-55005.herokuapp.com/',
-      github: 'https://github.com/SuB-GH/note-taker'
+      deployed: 'https://intense-plains-77184.herokuapp.com/',
+      github: 'https://github.com/SuB-GH/trip-inspired.git'
     },
     {
       name: 'Tech Blog',
@@ -43,36 +44,38 @@ const Project = ({ project }) => {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
       deployed: 'https://aqueous-badlands-64708.herokuapp.com/',
       github: 'https://github.com/SuB-GH/tech-blog'
-    },
+    }
+
+
   ]);
 
   return (
-    
-      <div id="myProjects" className="flex-row">
-        {projects.map((project, i) => (
-          <div className="projContainer" id="jpegs">
-            <h3>{project.name}</h3>      
-            <p id="urls">    
+
+    <div id="myProjects" className="flex-row">
+      {projects.map((project, i) => (
+        <div className="projContainer" id="jpegs">
+          <h3>{project.name}</h3>
+          <p id="urls">
             <a href={project.deployed} target='_blank' rel={project.deployed}>
               <button className="urlBtn">Deployed</button>
             </a>
 
             <a href={project.github} target='_blank' rel={project.github} >
               <button className="urlBtn">Github</button>
-              </a>
-            </p>  
-            <img
-              src={require(`../../assets/proj-img/${project.project}.jpg`)}
-              alt={project.name}
-              className="img-thumbnail mx-1"
-              
-              key={project.name}
-            />
-          </div>
-        ))}
-      </div>
+            </a>
+          </p>
+          <img
+            src={require(`../../assets/proj-img/${project.project}.jpg`)}
+            alt={project.name}
+            className="img-thumbnail mx-1"
 
-    
+            key={project.name}
+          />
+        </div>
+      ))}
+    </div>
+
+
   );
 };
 
