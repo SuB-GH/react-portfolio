@@ -120,7 +120,6 @@ section .my-5 {
 
 /*contact form*/
 #myContact {
-  background-color: #81bd9c;
   padding: 20px;
   width: 650px;
 
@@ -128,14 +127,14 @@ section .my-5 {
 
 /*Resume*/
 #myRes {
-  background-color: #81bd9c;
+  
   padding: 20px;
   width: 400px;
 
 }
 
 #myAbout {
-  background-color: #81bd9c;
+  
   padding: 20px;
 }
 
@@ -163,7 +162,7 @@ section .my-5 {
   align-self: center;
   justify-content: space-around;
   justify-content: space-between;
-  background-color: #81bd9c;
+  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 
